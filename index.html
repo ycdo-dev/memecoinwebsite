@@ -26,297 +26,298 @@
 
     <!-- Font preload for better performance -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comic Neue', cursive, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
-        body {
-            background: #13171F;
-            color: white;
-            line-height: 1.6;
-        }
+body {
+    background: #13171F;
+    color: white;
+    line-height: 1.6;
+}
 
-        .glow-text {
-            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
-            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
-            font-weight: bold;
-        }
+.glow-text {
+    font-family: 'Comic Neue', cursive, system-ui;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    font-weight: bold;
+}
 
-        nav {
-            background: rgba(0,0,0,0.9);
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            z-index: 100;
-            border-bottom: 2px solid #00ff00;
-        }
+nav {
+    background: rgba(0,0,0,0.9);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 2px solid #00ff00;
+}
 
-        .nav-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .logo {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #00ff00;
-            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
-        }
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00ff00;
+    font-family: 'Comic Neue', cursive, system-ui;
+}
 
-        .member-count {
-            background: #00ff00;
-            color: black;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-weight: bold;
-            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
-        }
+.member-count {
+    background: #00ff00;
+    color: black;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-weight: bold;
+    font-family: 'Comic Neue', cursive, system-ui;
+}
 
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 7rem 1rem;
-            text-align: center;
-            background: url('/api/placeholder/1200/800') center/cover;
-            position: relative;
-            overflow: hidden;
-        }
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7rem 1rem;
+    text-align: center;
+    background: url('/api/placeholder/1200/800') center/cover;
+    position: relative;
+    overflow: hidden;
+}
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.7);
-        }
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+}
 
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-        }
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
 
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            color: #00ff00;
-            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
-            font-weight: bold;
-        }
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #00ff00;
+    font-family: 'Comic Neue', cursive, system-ui;
+    font-weight: bold;
+}
 
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
-        }
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-family: 'Comic Neue', cursive, system-ui;
+}
 
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-        }
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
 
-        .cta-button {
-            background: #00ff00;
-            color: black;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.2rem;
-            transition: all 0.3s;
-            border: none;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
-        }
+.cta-button {
+    background: #00ff00;
+    color: black;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Comic Neue', cursive, system-ui;
+}
 
-        .cta-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px #00ff00;
-        }
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00ff00;
+}
 
-        .launch-progress {
-            background: rgba(0,255,0,0.1);
-            border: 2px solid #00ff00;
-            padding: 2rem;
-            border-radius: 15px;
-            margin: 3rem 0;
-            text-align: center;
-        }
+.launch-progress {
+    background: rgba(0,255,0,0.1);
+    border: 2px solid #00ff00;
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 3rem 0;
+    text-align: center;
+}
 
-        .progress-bar {
-            width: 100%;
-            height: 30px;
-            background: rgba(0,0,0,0.5);
-            border-radius: 15px;
-            overflow: hidden;
-            margin: 1rem 0;
-            border: 2px solid #00ff00;
-        }
+.progress-bar {
+    width: 100%;
+    height: 30px;
+    background: rgba(0,0,0,0.5);
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 1rem 0;
+    border: 2px solid #00ff00;
+}
 
-        .progress-fill {
-            height: 100%;
-            background: #00ff00;
-            width: 10%;
-            transition: width 1s ease;
-        }
+.progress-fill {
+    height: 100%;
+    background: #00ff00;
+    width: 10%;
+    transition: width 1s ease;
+}
 
-        .features {
-            padding: 5rem 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.features {
+    padding: 5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
 
-        .feature-card {
-            background: rgba(0,255,0,0.1);
-            border: 2px solid #00ff00;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
+.feature-card {
+    background: rgba(0,255,0,0.1);
+    border: 2px solid #00ff00;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+}
 
-        .feature-card:hover {
-            transform: translateY(-10px);
-        }
+.feature-card:hover {
+    transform: translateY(-10px);
+}
 
-        .feature-card h3 {
-            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
-            font-weight: bold;
-            margin: 1rem 0;
-        }
+.feature-card h3 {
+    font-family: 'Comic Neue', cursive, system-ui;
+    font-weight: bold;
+    margin: 1rem 0;
+}
 
-        .feature-card p {
-            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
-        }
+.feature-card p {
+    font-family: 'Comic Neue', cursive, system-ui;
+}
 
-        .feature-icon {
-            font-size: 3rem;
-            color: #00ff00;
-            margin-bottom: 1rem;
-        }
+.feature-icon {
+    font-size: 3rem;
+    color: #00ff00;
+    margin-bottom: 1rem;
+}
 
-        .launch-steps {
-            padding: 5rem 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.launch-steps {
+    padding: 5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
 
-        .step-card {
-            background: rgba(0,255,0,0.1);
-            border: 2px solid #00ff00;
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            position: relative;
-        }
+.step-card {
+    background: rgba(0,255,0,0.1);
+    border: 2px solid #00ff00;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+}
 
-        .step-card h3 {
-            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
-            font-weight: bold;
-            margin: 1rem 0;
-        }
+.step-card h3 {
+    font-family: 'Comic Neue', cursive, system-ui;
+    font-weight: bold;
+    margin: 1rem 0;
+}
 
-        .step-card p {
-            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
-        }
+.step-card p {
+    font-family: 'Comic Neue', cursive, system-ui;
+}
 
-        .step-number {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #00ff00;
-            color: black;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
-        }
+.step-number {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #00ff00;
+    color: black;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-family: 'Comic Neue', cursive, system-ui;
+}
 
-        footer {
-            background: rgba(0,0,0,0.9);
-            padding: 2rem;
-            text-align: center;
-            border-top: 2px solid #00ff00;
-        }
+footer {
+    background: rgba(0,0,0,0.9);
+    padding: 2rem;
+    text-align: center;
+    border-top: 2px solid #00ff00;
+}
 
-        .countdown {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin: 2rem 0;
-        }
+.countdown {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
 
-        .countdown-item {
-            background: rgba(0,255,0,0.1);
-            border: 2px solid #00ff00;
-            padding: 1rem;
-            border-radius: 10px;
-            min-width: 100px;
-            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
-        }
+.countdown-item {
+    background: rgba(0,255,0,0.1);
+    border: 2px solid #00ff00;
+    padding: 1rem;
+    border-radius: 10px;
+    min-width: 100px;
+    font-family: 'Comic Neue', cursive, system-ui;
+}
 
-        .countdown-value {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #00ff00;
-            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
-        }
+.countdown-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00ff00;
+    font-family: 'Comic Neue', cursive, system-ui;
+}
 
-        h2 {
-            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
-            font-weight: bold;
-        }
+h2 {
+    font-family: 'Comic Neue', cursive, system-ui;
+    font-weight: bold;
+}
 
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-            }
-        }
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+}
     </style>
 </head>
 <body>
