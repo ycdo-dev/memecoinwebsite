@@ -24,6 +24,9 @@
     </noscript>
     <!-- End Facebook Pixel Code -->
 
+    <!-- Font preload for better performance -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -32,7 +35,9 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         body {
@@ -42,7 +47,9 @@
         }
 
         .glow-text {
+            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
             text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+            font-weight: bold;
         }
 
         nav {
@@ -66,6 +73,7 @@
             font-size: 2rem;
             font-weight: bold;
             color: #00ff00;
+            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
         }
 
         .member-count {
@@ -74,6 +82,7 @@
             padding: 0.5rem 1rem;
             border-radius: 50px;
             font-weight: bold;
+            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
         }
 
         .hero {
@@ -108,11 +117,14 @@
             font-size: 4rem;
             margin-bottom: 1rem;
             color: #00ff00;
+            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
+            font-weight: bold;
         }
 
         .hero p {
             font-size: 1.5rem;
             margin-bottom: 2rem;
+            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
         }
 
         .cta-buttons {
@@ -136,6 +148,7 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
         }
 
         .cta-button:hover {
@@ -195,6 +208,16 @@
             transform: translateY(-10px);
         }
 
+        .feature-card h3 {
+            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .feature-card p {
+            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
+        }
+
         .feature-icon {
             font-size: 3rem;
             color: #00ff00;
@@ -223,6 +246,16 @@
             position: relative;
         }
 
+        .step-card h3 {
+            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .step-card p {
+            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
+        }
+
         .step-number {
             position: absolute;
             top: -15px;
@@ -237,6 +270,7 @@
             align-items: center;
             justify-content: center;
             font-weight: bold;
+            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
         }
 
         footer {
@@ -259,12 +293,19 @@
             padding: 1rem;
             border-radius: 10px;
             min-width: 100px;
+            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
         }
 
         .countdown-value {
             font-size: 2rem;
             font-weight: bold;
             color: #00ff00;
+            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
+        }
+
+        h2 {
+            font-family: "Comic Sans MS", "Comic Sans", cursive, -apple-system;
+            font-weight: bold;
         }
 
         @media (max-width: 768px) {
@@ -369,9 +410,10 @@
                 <p>Massive raid campaigns, trending on Twitter, and viral meme contests.</p>
             </div>
             <div class="step-card" data-aos="fade-up">
-                <div class="step-number">4</div>
-                <h3>Moon Mission</h3>
-                <p>CG/CMC listings, influencer partnerships, and exchange listings.</p>
+                    <div class="step-number">4</div>
+                    <h3>Moon Mission</h3>
+                    <p>CG/CMC listings, influencer partnerships, and exchange listings.</p>
+                </div>
             </div>
         </div>
     </section>
