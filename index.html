@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$PEPE2 - Community First, Launch Later 🚀</title>
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1014800630392823');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=1014800630392823&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        body {
+            background: #13171F;
+            color: white;
+            line-height: 1.6;
+        }
+
+        .glow-text {
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+        }
+
+        nav {
+            background: rgba(0,0,0,0.9);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            border-bottom: 2px solid #00ff00;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00ff00;
+        }
+
+        .member-count {
+            background: #00ff00;
+            color: black;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 7rem 1rem;
+            text-align: center;
+            background: url('/api/placeholder/1200/800') center/cover;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: #00ff00;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .cta-button {
+            background: #00ff00;
+            color: black;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #00ff00;
+        }
+
+        .launch-progress {
+            background: rgba(0,255,0,0.1);
+            border: 2px solid #00ff00;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 30px;
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+            overflow: hidden;
+            margin: 1rem 0;
+            border: 2px solid #00ff00;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #00ff00;
+            width: 10%;
+            transition: width 1s ease;
+        }
+
+        .features {
+            padding: 5rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: rgba(0,255,0,0.1);
+            border: 2px solid #00ff00;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #00ff00;
+            margin-bottom: 1rem;
+        }
+
+        .launch-steps {
+            padding: 5rem 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step-card {
+            background: rgba(0,255,0,0.1);
+            border: 2px solid #00ff00;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #00ff00;
+            color: black;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        footer {
+            background: rgba(0,0,0,0.9);
+            padding: 2rem;
+            text-align: center;
+            border-top: 2px solid #00ff00;
+        }
+
+        .countdown {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .countdown-item {
+            background: rgba(0,255,0,0.1);
+            border: 2px solid #00ff00;
+            padding: 1rem;
+            border-radius: 10px;
+            min-width: 100px;
+        }
+
+        .countdown-value {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #00ff00;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">🐸 $PEPE2</div>
+            <div class="member-count">
+                <span id="memberCount">127</span> / 1000 Members
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="glow-text">$PEPE2 🐸</h1>
+            <p>Building The Strongest Meme Community Before Launch</p>
+            
+            <div class="launch-progress">
+                <h2>Community Launch Progress</h2>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressBar"></div>
+                </div>
+                <p><span id="progressText">127</span> / 1000 Members to Launch</p>
+            </div>
+
+            <div class="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-value" id="days">14</div>
+                    <div>Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="hours">22</div>
+                    <div>Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="minutes">45</div>
+                    <div>Minutes</div>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="#" class="cta-button" onclick="fbq('track', 'Lead', {content_name: 'Telegram Join'});">
+                    <i class="fab fa-telegram"></i>
+                    Join Telegram
+                </a>
+                <a href="#" class="cta-button" onclick="fbq('track', 'Lead', {content_name: 'Twitter Follow'});">
+                    <i class="fab fa-twitter"></i>
+                    Follow Twitter
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section class="features">
+        <h2 class="glow-text" style="text-align: center; font-size: 3rem; margin-bottom: 2rem;">Why Join Early?</h2>
+        <div class="features-grid">
+            <div class="feature-card" data-aos="fade-up">
+                <i class="fas fa-users feature-icon"></i>
+                <h3>Strong Community</h3>
+                <p>We're building a solid community before launch. No bots, no fake hype - just real degens ready to moon.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up">
+                <i class="fas fa-shield-alt feature-icon"></i>
+                <h3>Fair Launch</h3>
+                <p>Launching through pump.fun for maximum transparency. Everyone gets the same chance to buy.</p>
+            </div>
+            <div class="feature-card" data-aos="fade-up">
+                <i class="fas fa-rocket feature-icon"></i>
+                <h3>Early Access</h3>
+                <p>Pre-launch community members get notified first when we launch. Don't miss the pump!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="launch-steps">
+        <h2 class="glow-text" style="text-align: center; font-size: 3rem; margin-bottom: 2rem;">Launch Plan</h2>
+        <div class="steps-grid">
+            <div class="step-card" data-aos="fade-up">
+                <div class="step-number">1</div>
+                <h3>Community Building</h3>
+                <p>Growing to 1000+ real members. No bots, no fake numbers.</p>
+            </div>
+            <div class="step-card" data-aos="fade-up">
+                <div class="step-number">2</div>
+                <h3>Fair Launch on pump.fun</h3>
+                <p>Using pump.fun for a transparent, fair launch everyone can trust.</p>
+            </div>
+            <div class="step-card" data-aos="fade-up">
+                <div class="step-number">3</div>
+                <h3>Marketing Push</h3>
+                <p>Massive raid campaigns, trending on Twitter, and viral meme contests.</p>
+            </div>
+            <div class="step-card" data-aos="fade-up">
+                <div class="step-number">4</div>
+                <h3>Moon Mission</h3>
+                <p>CG/CMC listings, influencer partnerships, and exchange listings.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="cta-buttons">
+            <a href="#" class="cta-button" onclick="fbq('track', 'Lead', {content_name: 'Footer Telegram'});">Telegram</a>
+            <a href="#" class="cta-button" onclick="fbq('track', 'Lead', {content_name: 'Footer Twitter'});">Twitter</a>
+        </div>
+        <p style="margin-top: 1rem;">$PEPE2 © 2024 | Launching Soon on pump.fun 🚀</p>
+    </footer>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Update progress bar
+        function updateProgress() {
+            const currentMembers = parseInt(document.getElementById('memberCount').textContent);
+            const percentage = (currentMembers / 1000) * 100;
+            document.getElementById('progressBar').style.width = percentage + '%';
+            document.getElementById('progressText').textContent = currentMembers;
+        }
+        updateProgress();
+
+        // Update countdown (example)
+        function updateCountdown() {
+            // You would replace this with actual launch date logic
+            const now = new Date();
+            document.getElementById('minutes').textContent = 59 - now.getMinutes();
+            document.getElementById('hours').textContent = 23 - now.getHours();
+        }
+        setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
